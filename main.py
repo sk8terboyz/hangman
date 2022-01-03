@@ -58,32 +58,32 @@ def singlePlayer():
                 i += 1
 
         # Create buttons for each letter
-        alph1 = ttk.Button(gameRoot, text="A", command= lambda: guessLetter('A', word)).grid(column=1, row=3, ipadx=2, ipady=2)
-        alph2 = ttk.Button(gameRoot, text="B", command= lambda: guessLetter('B', word)).grid(column=2, row=3, ipadx=2, ipady=2)
-        alph3 = ttk.Button(gameRoot, text="C", command= lambda: guessLetter('C', word)).grid(column=3, row=3, ipadx=2, ipady=2)
-        alph4 = ttk.Button(gameRoot, text="D", command= lambda: guessLetter('D', word)).grid(column=4, row=3, ipadx=2, ipady=2)
-        alph5 = ttk.Button(gameRoot, text="E", command= lambda: guessLetter('E', word)).grid(column=5, row=3, ipadx=2, ipady=2)
-        alph6 = ttk.Button(gameRoot, text="F", command= lambda: guessLetter('F', word)).grid(column=6, row=3, ipadx=2, ipady=2)
-        alph7 = ttk.Button(gameRoot, text="G", command= lambda: guessLetter('G', word)).grid(column=7, row=3, ipadx=2, ipady=2)
-        alph8 = ttk.Button(gameRoot, text="H", command= lambda: guessLetter('H', word)).grid(column=8, row=3, ipadx=2, ipady=2)
-        alph9 = ttk.Button(gameRoot, text="I", command= lambda: guessLetter('I', word)).grid(column=9, row=3, ipadx=2, ipady=2)
-        alph10 = ttk.Button(gameRoot, text="J", command= lambda: guessLetter('J', word)).grid(column=1, row=4, ipadx=2, ipady=2)
-        alph11 = ttk.Button(gameRoot, text="K", command= lambda: guessLetter('K', word)).grid(column=2, row=4, ipadx=2, ipady=2)
-        alph12 = ttk.Button(gameRoot, text="L", command= lambda: guessLetter('L', word)).grid(column=3, row=4, ipadx=2, ipady=2)
-        alph13 = ttk.Button(gameRoot, text="M", command= lambda: guessLetter('M', word)).grid(column=4, row=4, ipadx=2, ipady=2)
-        alph14 = ttk.Button(gameRoot, text="N", command= lambda: guessLetter('N', word)).grid(column=5, row=4, ipadx=2, ipady=2)
-        alph15 = ttk.Button(gameRoot, text="O", command= lambda: guessLetter('O', word)).grid(column=6, row=4, ipadx=2, ipady=2)
-        alph16 = ttk.Button(gameRoot, text="P", command= lambda: guessLetter('P', word)).grid(column=7, row=4, ipadx=2, ipady=2)
-        alph17 = ttk.Button(gameRoot, text="Q", command= lambda: guessLetter('Q', word)).grid(column=8, row=4, ipadx=2, ipady=2)
-        alph18 = ttk.Button(gameRoot, text="R", command= lambda: guessLetter('R', word)).grid(column=9, row=4, ipadx=2, ipady=2)
-        alph19 = ttk.Button(gameRoot, text="S", command= lambda: guessLetter('S', word)).grid(column=1, row=5, ipadx=2, ipady=2)
-        alph20 = ttk.Button(gameRoot, text="T", command= lambda: guessLetter('T', word)).grid(column=2, row=5, ipadx=2, ipady=2)
-        alph21 = ttk.Button(gameRoot, text="U", command= lambda: guessLetter('U', word)).grid(column=3, row=5, ipadx=2, ipady=2)
-        alph22 = ttk.Button(gameRoot, text="V", command= lambda: guessLetter('V', word)).grid(column=4, row=5, ipadx=2, ipady=2)
-        alph23 = ttk.Button(gameRoot, text="W", command= lambda: guessLetter('W', word)).grid(column=5, row=5, ipadx=2, ipady=2)
-        alph24 = ttk.Button(gameRoot, text="X", command= lambda: guessLetter('X', word)).grid(column=6, row=5, ipadx=2, ipady=2)
-        alph25 = ttk.Button(gameRoot, text="Y", command= lambda: guessLetter('Y', word)).grid(column=7, row=5, ipadx=2, ipady=2)
-        alph26 = ttk.Button(gameRoot, text="Z", command= lambda: guessLetter('Z', word)).grid(column=8, row=5, ipadx=2, ipady=2)
+        alph1 = ttk.Button(gameRoot, text="A", command= lambda: guessLetter('A', word, gameRoot)).grid(column=1, row=3, ipadx=2, ipady=2)
+        alph2 = ttk.Button(gameRoot, text="B", command= lambda: guessLetter('B', word, gameRoot)).grid(column=2, row=3, ipadx=2, ipady=2)
+        alph3 = ttk.Button(gameRoot, text="C", command= lambda: guessLetter('C', word, gameRoot)).grid(column=3, row=3, ipadx=2, ipady=2)
+        alph4 = ttk.Button(gameRoot, text="D", command= lambda: guessLetter('D', word, gameRoot)).grid(column=4, row=3, ipadx=2, ipady=2)
+        alph5 = ttk.Button(gameRoot, text="E", command= lambda: guessLetter('E', word, gameRoot)).grid(column=5, row=3, ipadx=2, ipady=2)
+        alph6 = ttk.Button(gameRoot, text="F", command= lambda: guessLetter('F', word, gameRoot)).grid(column=6, row=3, ipadx=2, ipady=2)
+        alph7 = ttk.Button(gameRoot, text="G", command= lambda: guessLetter('G', word, gameRoot)).grid(column=7, row=3, ipadx=2, ipady=2)
+        alph8 = ttk.Button(gameRoot, text="H", command= lambda: guessLetter('H', word, gameRoot)).grid(column=8, row=3, ipadx=2, ipady=2)
+        alph9 = ttk.Button(gameRoot, text="I", command= lambda: guessLetter('I', word, gameRoot)).grid(column=9, row=3, ipadx=2, ipady=2)
+        alph10 = ttk.Button(gameRoot, text="J", command= lambda: guessLetter('J', word, gameRoot)).grid(column=1, row=4, ipadx=2, ipady=2)
+        alph11 = ttk.Button(gameRoot, text="K", command= lambda: guessLetter('K', word, gameRoot)).grid(column=2, row=4, ipadx=2, ipady=2)
+        alph12 = ttk.Button(gameRoot, text="L", command= lambda: guessLetter('L', word, gameRoot)).grid(column=3, row=4, ipadx=2, ipady=2)
+        alph13 = ttk.Button(gameRoot, text="M", command= lambda: guessLetter('M', word, gameRoot)).grid(column=4, row=4, ipadx=2, ipady=2)
+        alph14 = ttk.Button(gameRoot, text="N", command= lambda: guessLetter('N', word, gameRoot)).grid(column=5, row=4, ipadx=2, ipady=2)
+        alph15 = ttk.Button(gameRoot, text="O", command= lambda: guessLetter('O', word, gameRoot)).grid(column=6, row=4, ipadx=2, ipady=2)
+        alph16 = ttk.Button(gameRoot, text="P", command= lambda: guessLetter('P', word, gameRoot)).grid(column=7, row=4, ipadx=2, ipady=2)
+        alph17 = ttk.Button(gameRoot, text="Q", command= lambda: guessLetter('Q', word, gameRoot)).grid(column=8, row=4, ipadx=2, ipady=2)
+        alph18 = ttk.Button(gameRoot, text="R", command= lambda: guessLetter('R', word, gameRoot)).grid(column=9, row=4, ipadx=2, ipady=2)
+        alph19 = ttk.Button(gameRoot, text="S", command= lambda: guessLetter('S', word, gameRoot)).grid(column=1, row=5, ipadx=2, ipady=2)
+        alph20 = ttk.Button(gameRoot, text="T", command= lambda: guessLetter('T', word, gameRoot)).grid(column=2, row=5, ipadx=2, ipady=2)
+        alph21 = ttk.Button(gameRoot, text="U", command= lambda: guessLetter('U', word, gameRoot)).grid(column=3, row=5, ipadx=2, ipady=2)
+        alph22 = ttk.Button(gameRoot, text="V", command= lambda: guessLetter('V', word, gameRoot)).grid(column=4, row=5, ipadx=2, ipady=2)
+        alph23 = ttk.Button(gameRoot, text="W", command= lambda: guessLetter('W', word, gameRoot)).grid(column=5, row=5, ipadx=2, ipady=2)
+        alph24 = ttk.Button(gameRoot, text="X", command= lambda: guessLetter('X', word, gameRoot)).grid(column=6, row=5, ipadx=2, ipady=2)
+        alph25 = ttk.Button(gameRoot, text="Y", command= lambda: guessLetter('Y', word, gameRoot)).grid(column=7, row=5, ipadx=2, ipady=2)
+        alph26 = ttk.Button(gameRoot, text="Z", command= lambda: guessLetter('Z', word, gameRoot)).grid(column=8, row=5, ipadx=2, ipady=2)
         
         # Button for guessing
         submit = ttk.Button(gameRoot, text="Guess", command=makeGuess).grid(column=9, row=5, ipadx=2, ipady=2)
@@ -124,32 +124,32 @@ def multiplayer(playerMadeWord):
             i += 1
 
         # Create buttons for each letter
-        alph1 = ttk.Button(mpRoot, text="A", command= lambda: guessLetter('A', word)).grid(column=1, row=2, ipadx=2, ipady=2)
-        alph2 = ttk.Button(mpRoot, text="B", command= lambda: guessLetter('B', word)).grid(column=2, row=2, ipadx=2, ipady=2)
-        alph3 = ttk.Button(mpRoot, text="C", command= lambda: guessLetter('C', word)).grid(column=3, row=2, ipadx=2, ipady=2)
-        alph4 = ttk.Button(mpRoot, text="D", command= lambda: guessLetter('D', word)).grid(column=4, row=2, ipadx=2, ipady=2)
-        alph5 = ttk.Button(mpRoot, text="E", command= lambda: guessLetter('E', word)).grid(column=5, row=2, ipadx=2, ipady=2)
-        alph6 = ttk.Button(mpRoot, text="F", command= lambda: guessLetter('F', word)).grid(column=6, row=2, ipadx=2, ipady=2)
-        alph7 = ttk.Button(mpRoot, text="G", command= lambda: guessLetter('G', word)).grid(column=7, row=2, ipadx=2, ipady=2)
-        alph8 = ttk.Button(mpRoot, text="H", command= lambda: guessLetter('H', word)).grid(column=8, row=2, ipadx=2, ipady=2)
-        alph9 = ttk.Button(mpRoot, text="I", command= lambda: guessLetter('I', word)).grid(column=9, row=2, ipadx=2, ipady=2)
-        alph11 = ttk.Button(mpRoot, text="K", command= lambda: guessLetter('K', word)).grid(column=2, row=3, ipadx=2, ipady=2)
-        alph10 = ttk.Button(mpRoot, text="J", command= lambda: guessLetter('J', word)).grid(column=1, row=3, ipadx=2, ipady=2)
-        alph12 = ttk.Button(mpRoot, text="L", command= lambda: guessLetter('L', word)).grid(column=3, row=3, ipadx=2, ipady=2)
-        alph13 = ttk.Button(mpRoot, text="M", command= lambda: guessLetter('M', word)).grid(column=4, row=3, ipadx=2, ipady=2)
-        alph14 = ttk.Button(mpRoot, text="N", command= lambda: guessLetter('N', word)).grid(column=5, row=3, ipadx=2, ipady=2)
-        alph15 = ttk.Button(mpRoot, text="O", command= lambda: guessLetter('O', word)).grid(column=6, row=3, ipadx=2, ipady=2)
-        alph16 = ttk.Button(mpRoot, text="P", command= lambda: guessLetter('P', word)).grid(column=7, row=3, ipadx=2, ipady=2)
-        alph17 = ttk.Button(mpRoot, text="Q", command= lambda: guessLetter('Q', word)).grid(column=8, row=3, ipadx=2, ipady=2)
-        alph18 = ttk.Button(mpRoot, text="R", command= lambda: guessLetter('R', word)).grid(column=9, row=3, ipadx=2, ipady=2)
-        alph20 = ttk.Button(mpRoot, text="T", command= lambda: guessLetter('T', word)).grid(column=2, row=4, ipadx=2, ipady=2)
-        alph19 = ttk.Button(mpRoot, text="S", command= lambda: guessLetter('S', word)).grid(column=1, row=4, ipadx=2, ipady=2)
-        alph21 = ttk.Button(mpRoot, text="U", command= lambda: guessLetter('U', word)).grid(column=3, row=4, ipadx=2, ipady=2)
-        alph22 = ttk.Button(mpRoot, text="V", command= lambda: guessLetter('V', word)).grid(column=4, row=4, ipadx=2, ipady=2)
-        alph23 = ttk.Button(mpRoot, text="W", command= lambda: guessLetter('W', word)).grid(column=5, row=4, ipadx=2, ipady=2)
-        alph24 = ttk.Button(mpRoot, text="X", command= lambda: guessLetter('X', word)).grid(column=6, row=4, ipadx=2, ipady=2)
-        alph25 = ttk.Button(mpRoot, text="Y", command= lambda: guessLetter('Y', word)).grid(column=7, row=4, ipadx=2, ipady=2)
-        alph26 = ttk.Button(mpRoot, text="Z", command= lambda: guessLetter('Z', word)).grid(column=8, row=4, ipadx=2, ipady=2)
+        alph1 = ttk.Button(mpRoot, text="A", command= lambda: guessLetter('A', word, mpRoot)).grid(column=1, row=2, ipadx=2, ipady=2)
+        alph2 = ttk.Button(mpRoot, text="B", command= lambda: guessLetter('B', word, mpRoot)).grid(column=2, row=2, ipadx=2, ipady=2)
+        alph3 = ttk.Button(mpRoot, text="C", command= lambda: guessLetter('C', word, mpRoot)).grid(column=3, row=2, ipadx=2, ipady=2)
+        alph4 = ttk.Button(mpRoot, text="D", command= lambda: guessLetter('D', word, mpRoot)).grid(column=4, row=2, ipadx=2, ipady=2)
+        alph5 = ttk.Button(mpRoot, text="E", command= lambda: guessLetter('E', word, mpRoot)).grid(column=5, row=2, ipadx=2, ipady=2)
+        alph6 = ttk.Button(mpRoot, text="F", command= lambda: guessLetter('F', word, mpRoot)).grid(column=6, row=2, ipadx=2, ipady=2)
+        alph7 = ttk.Button(mpRoot, text="G", command= lambda: guessLetter('G', word, mpRoot)).grid(column=7, row=2, ipadx=2, ipady=2)
+        alph8 = ttk.Button(mpRoot, text="H", command= lambda: guessLetter('H', word, mpRoot)).grid(column=8, row=2, ipadx=2, ipady=2)
+        alph9 = ttk.Button(mpRoot, text="I", command= lambda: guessLetter('I', word, mpRoot)).grid(column=9, row=2, ipadx=2, ipady=2)
+        alph11 = ttk.Button(mpRoot, text="K", command= lambda: guessLetter('K', word, mpRoot)).grid(column=2, row=3, ipadx=2, ipady=2)
+        alph10 = ttk.Button(mpRoot, text="J", command= lambda: guessLetter('J', word, mpRoot)).grid(column=1, row=3, ipadx=2, ipady=2)
+        alph12 = ttk.Button(mpRoot, text="L", command= lambda: guessLetter('L', word, mpRoot)).grid(column=3, row=3, ipadx=2, ipady=2)
+        alph13 = ttk.Button(mpRoot, text="M", command= lambda: guessLetter('M', word, mpRoot)).grid(column=4, row=3, ipadx=2, ipady=2)
+        alph14 = ttk.Button(mpRoot, text="N", command= lambda: guessLetter('N', word, mpRoot)).grid(column=5, row=3, ipadx=2, ipady=2)
+        alph15 = ttk.Button(mpRoot, text="O", command= lambda: guessLetter('O', word, mpRoot)).grid(column=6, row=3, ipadx=2, ipady=2)
+        alph16 = ttk.Button(mpRoot, text="P", command= lambda: guessLetter('P', word, mpRoot)).grid(column=7, row=3, ipadx=2, ipady=2)
+        alph17 = ttk.Button(mpRoot, text="Q", command= lambda: guessLetter('Q', word, mpRoot)).grid(column=8, row=3, ipadx=2, ipady=2)
+        alph18 = ttk.Button(mpRoot, text="R", command= lambda: guessLetter('R', word, mpRoot)).grid(column=9, row=3, ipadx=2, ipady=2)
+        alph20 = ttk.Button(mpRoot, text="T", command= lambda: guessLetter('T', word, mpRoot)).grid(column=2, row=4, ipadx=2, ipady=2)
+        alph19 = ttk.Button(mpRoot, text="S", command= lambda: guessLetter('S', word, mpRoot)).grid(column=1, row=4, ipadx=2, ipady=2)
+        alph21 = ttk.Button(mpRoot, text="U", command= lambda: guessLetter('U', word, mpRoot)).grid(column=3, row=4, ipadx=2, ipady=2)
+        alph22 = ttk.Button(mpRoot, text="V", command= lambda: guessLetter('V', word, mpRoot)).grid(column=4, row=4, ipadx=2, ipady=2)
+        alph23 = ttk.Button(mpRoot, text="W", command= lambda: guessLetter('W', word, mpRoot)).grid(column=5, row=4, ipadx=2, ipady=2)
+        alph24 = ttk.Button(mpRoot, text="X", command= lambda: guessLetter('X', word, mpRoot)).grid(column=6, row=4, ipadx=2, ipady=2)
+        alph25 = ttk.Button(mpRoot, text="Y", command= lambda: guessLetter('Y', word, mpRoot)).grid(column=7, row=4, ipadx=2, ipady=2)
+        alph26 = ttk.Button(mpRoot, text="Z", command= lambda: guessLetter('Z', word, mpRoot)).grid(column=8, row=4, ipadx=2, ipady=2)
         
         # Button for guessing
         submit = ttk.Button(mpRoot, text="Guess", command= lambda: makeGuess()).grid(column=9, row=4, ipadx=2, ipady=2)
@@ -180,23 +180,27 @@ def enterWord():
         newWordRoot.destroy()
         multiplayer(newWord)
 
-def guessLetter(letter, word):
+def guessLetter(letter, word, root):
     print(letter)
     match = False
     index = 0
+    print(word)
     for letters in word:
-        if letter == letters:
-            showLetter(letter, index)
+        if letter.lower() == letters:
+            showLetter(letter, index, root)
             match = True
-        elif match == False:
-            failedLetterGuess(letter)
         index += 1
+    if match == False:
+        failedLetterGuess(letter)
 
-def showLetter(letter, index):
-    print("displaying")
+def showLetter(letter, index, root):
+    # Create letter spaces for the new word
+    whitespace = ttk.Label(root, text="\t\t\t\t").grid(column=0, row=0)
+    label = ttk.Label(root, text=letter).grid(column=index+1, row=0)
 
 def failedLetterGuess(letter):
-    print(letter)
+    print("failed letter: " + letter)
+    failedAttempts = 0
 
 def makeGuess():
     print("guessing")
