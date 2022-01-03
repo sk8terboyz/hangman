@@ -45,16 +45,16 @@ def singlePlayer():
         j = 1
         i = 1
         if len(word) > 9:
-            i = 0
+            whitespace1 = ttk.Label(gameRoot, text="\t\t").grid(column=0, row=1)
         else:
-            whitespace = ttk.Label(gameRoot, text="\t\t\t\t").grid(column=0, row=1)
+            whitespace2 = ttk.Label(gameRoot, text="\t\t\t\t").grid(column=0, row=1)
         for letter in word:
             if(letter in punctuation):
                 wordError()
                 break
             else:
                 # print(i)
-                label1 = ttk.Label(gameRoot, text="______").grid(column=i, row=j)
+                label1 = ttk.Label(gameRoot, text="_____").grid(column=i, row=j)
                 i += 1
 
         # Create buttons for each letter
@@ -86,7 +86,7 @@ def singlePlayer():
         alph26 = ttk.Button(gameRoot, text="Z", command= lambda: guessLetter('Z', word, gameRoot)).grid(column=8, row=5, ipadx=2, ipady=2)
         
         # Button for guessing
-        submit = ttk.Button(gameRoot, text="Guess", command=makeGuess).grid(column=9, row=5, ipadx=2, ipady=2)
+        submit = ttk.Button(gameRoot, text="Guess", command=lambda: makeGuess(word)).grid(column=9, row=5, ipadx=2, ipady=2)
 
         # Display hanging stand
         # canvas = Canvas(gameRoot, width = 640, height = 480).grid(column=0, row=0)
@@ -116,11 +116,11 @@ def multiplayer(playerMadeWord):
         j = 1
         i = 1
         if len(word) > 9:
-            i = 0
+            whitespace1 = ttk.Label(mpRoot, text="\t\t").grid(column=0, row=1)
         else:
-            whitespace = ttk.Label(mpRoot, text="\t\t\t\t").grid(column=0, row=1)
+            whitespace2 = ttk.Label(mpRoot, text="\t\t\t\t").grid(column=0, row=1)
         for letter in word:
-            label1 = ttk.Label(mpRoot, text="______").grid(column=i, row=j)
+            label1 = ttk.Label(mpRoot, text="_____").grid(column=i, row=j)
             i += 1
 
         # Create buttons for each letter
@@ -152,12 +152,11 @@ def multiplayer(playerMadeWord):
         alph26 = ttk.Button(mpRoot, text="Z", command= lambda: guessLetter('Z', word, mpRoot)).grid(column=8, row=4, ipadx=2, ipady=2)
         
         # Button for guessing
-        submit = ttk.Button(mpRoot, text="Guess", command= lambda: makeGuess()).grid(column=9, row=4, ipadx=2, ipady=2)
+        submit = ttk.Button(mpRoot, text="Guess", command= lambda: makeGuess(word)).grid(column=9, row=4, ipadx=2, ipady=2)
     except:
         loadError()
 
 def enterWord():
-    print("Enter the word for others to guess")
     newWordRoot = Tk()
     newWordFrame = ttk.Frame(newWordRoot, padding=50)
     newWordGrid = newWordFrame.grid()
@@ -194,16 +193,67 @@ def guessLetter(letter, word, root):
         failedLetterGuess(letter)
 
 def showLetter(letter, index, root):
-    # Create letter spaces for the new word
+    # Print the correct letter above the lines placed earlier
     whitespace = ttk.Label(root, text="\t\t\t\t").grid(column=0, row=0)
     label = ttk.Label(root, text=letter).grid(column=index+1, row=0)
 
 def failedLetterGuess(letter):
     print("failed letter: " + letter)
+    # Make failed attempts variable to track which pics have already been displayed and which ones need to still be displayed
+    # Display each letter as a guessed wrong letter (may need to be done where the root is created so it can be added to)
     failedAttempts = 0
 
-def makeGuess():
+def makeGuess(word):
     print("guessing")
+    guessRoot = Tk()
+    guessFrame = ttk.Frame(guessRoot, padding=50)
+    guessGrid = guessFrame.grid()
+
+    # Label to explain
+    label1 = ttk.Label(guessRoot, text="Ready to answer?").grid(column=1, row=1, ipady=5, ipadx=5)
+    label2 = ttk.Label(guessRoot, text="Only use letters in the English Alphabet, no punctuation. (caps don't matter)").grid(column=2, row=1, ipady=5, ipadx=5)
+    label3 = ttk.Label(guessRoot, text="\tEnter word here:").grid(column=1, row=2, ipady=5, ipadx=5)
+
+    # Entry for user to type in
+    entry1 = ttk.Entry(guessRoot)
+    entry1.grid(column=2, row=2, ipady=5, ipadx=5)
+
+    # Button to log entry and exit window
+    entrySubmit = ttk.Button(guessRoot, text="Submit", command=lambda: saveGuess()).grid(column=3, row=2, ipady=5, ipadx=5)
+
+    def saveGuess():
+        guessedWord = entry1.get()
+        guessRoot.destroy()
+        guessed(guessedWord, word)
+
+def guessed(guessed, word):
+    if(guessed.lower() == word.lower()):
+        winner()
+    else:
+        incorrect()
+
+def winner():
+    winnerRoot = Tk()
+    winnerFrame = ttk.Frame(winnerRoot, padding=100)
+    winnerGrid = winnerFrame.grid()
+
+    # Label to explain
+    label1 = ttk.Label(winnerRoot, font=("Arial", 32), text="YOU WON").grid(column=1, row=1, ipady=5, ipadx=5)
+
+    # Button to exit window
+    exitButton = ttk.Button(winnerRoot, text="Exit", command=winnerRoot.destroy).grid(column=1, row=2, ipady=5, ipadx=5)
+
+def incorrect():
+    incorrectRoot = Tk()
+    incorrectFrame = ttk.Frame(incorrectRoot, padding=100)
+    incorrectGrid = incorrectFrame.grid()
+
+    # Label to explain
+    label1 = ttk.Label(incorrectRoot, text="You were incorrect in this guess!").grid(column=1, row=1, ipady=5, ipadx=5)
+
+    # Button to log entry and exit window
+    guessedWord = ""
+    entrySubmit = ttk.Button(incorrectRoot, text="Got it!", command=incorrectRoot.destroy).grid(column=3, row=2, ipady=5, ipadx=5)
 
 def loadError():
     # display error message to user
