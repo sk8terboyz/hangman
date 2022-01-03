@@ -88,11 +88,6 @@ def singlePlayer():
         # Button for guessing
         submit = ttk.Button(gameRoot, text="Guess", command=lambda: makeGuess(word)).grid(column=9, row=5, ipadx=2, ipady=2)
 
-        # Display hanging stand
-        # canvas = Canvas(gameRoot, width = 640, height = 480).grid(column=0, row=0)
-        # base = ImageTk.PhotoImage(Image.open("/imgs/base.png"))
-        # canvas.create_image(20, 20, anchor=NW, image=base)
-
     except:
         loadError()
     print("single player")
@@ -190,18 +185,50 @@ def guessLetter(letter, word, root):
             match = True
         index += 1
     if match == False:
-        failedLetterGuess(letter)
+        failedLetterGuess(letter, root)
 
 def showLetter(letter, index, root):
     # Print the correct letter above the lines placed earlier
     whitespace = ttk.Label(root, text="\t\t\t\t").grid(column=0, row=0)
     label = ttk.Label(root, text=letter).grid(column=index+1, row=0)
 
-def failedLetterGuess(letter):
+# global var for imgs to be displayed
+arms = 0
+legs = 0
+base = 0
+head = 0
+body = 0
+attempts = 1
+
+def failedLetterGuess(letter, root):
     print("failed letter: " + letter)
+    global base, body, head, arms, legs, attempts
     # Make failed attempts variable to track which pics have already been displayed and which ones need to still be displayed
+    if base == 0:
+        print("display base")
+        base += 1
+    elif head == 0:
+        print("display head")
+        head += 1
+    elif body == 0:
+        print("display body")
+        body += 1
+    elif arms == 0:
+        print("display right arm")
+        arms += 1
+    elif legs == 0:
+        print("display right leg")
+        legs += 1
+    elif arms == 1:
+        print("display left arm")
+        arms += 1
+    elif legs == 1:
+        print("display left leg")
+        legs += 1
     # Display each letter as a guessed wrong letter (may need to be done where the root is created so it can be added to)
-    failedAttempts = 0
+    label = ttk.Label(root, text=letter).grid(column=attempts, row=7, ipady=20, ipadx=5)
+    attempts += 1
+    
 
 def makeGuess(word):
     print("guessing")
